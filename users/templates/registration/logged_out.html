@@ -1,0 +1,15 @@
+{% extends 'session_tracker/base.html' %} 
+
+{% block content %} 
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+<body>
+    <a href="{% url 'users:login' %}">Log In</a>-
+    <a href="{% url 'users:register' %}">Register</a>
+
+    <p>You've been logged out.</p>
+</body>
+{% endblock content %}

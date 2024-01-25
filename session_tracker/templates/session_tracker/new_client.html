@@ -1,0 +1,10 @@
+{% extends 'session_tracker/base.html' %} 
+
+{% block content %} 
+<form method="post" action="{% url 'session_tracker:new_client' %}">
+    {% csrf_token %} 
+    {{  form.as_p }}
+
+    <button type="submit">Add Client</button>
+ </form>
+{% endblock content %}
